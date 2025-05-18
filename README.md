@@ -36,3 +36,86 @@ The system captures live video from a webcam, detects faces using OpenCV's Haar 
    
 ```bash
 git clone https://github.com/CayMan4444/Face-Emotion-Recognition/
+```
+
+2. (Optional) Create and activate a virtual environment:
+Linux/macOS:
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+Windows:
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+3. Install the required packages:
+
+```bash
+pip install -r requirements.txt
+```
+
+## Usage
+
+### Training the Model
+Prepare your dataset folder as follows:
+```bash
+dataset/
+├── angry/
+├── happy/
+├── sad/
+├── surprise/
+└── neutral/
+```
+Each subfolder should contain grayscale images of faces expressing the respective emotion.
+
+Run the training script:
+```bash
+python train_model.py
+```
+The model will train with data augmentation and early stopping.
+Once completed, it saves:
+ * `emotion_recognition_model.h5` — the trained CNN model
+ * `labels.txt` — mapping of label indices to emotion names
+
+## Running Real-Time Emotion Detection
+
+Run the detection script to start webcam emotion recognition:
+```bash
+python emotion_detection.py
+```
+A window will open showing webcam video with detected faces and their predicted emotions.
+Press `q` to quit the program.
+
+## Project Structure
+
+* `train_model.py`: Script to load data, train the CNN model, and save model & labels
+* `emotion_detection.py`: Script to run live emotion recognition via webcam
+* `dataset/`: Folder containing emotion-labeled training images
+* `requirements.txt`: Python dependencies
+* `labels.txt`: Label-to-index mapping saved after training
+* `emotion_recognition_model.h5`: Saved trained CNN model
+
+## Troubleshooting
+
+* Ensure your webcam is connected and accessible by OpenCV.
+* Verify that `emotion_recognition_model.h5` and `labels.txt` are in the same directory as `emotion_detection.py` or update paths accordingly.
+* If package installation fails, check your Python version and pip installation.
+
+## Contribution
+
+Contributions and improvements are welcome! Please fork the repository, create a feature branch, and submit a pull request.
+Maintain clear commit messages and update documentation as needed.
+
+## License
+
+This project is licensed under the MIT License.
+
+## Acknowledgements
+
+* OpenCV for face detection utilities
+* TensorFlow/Keras for deep learning framework
+* scikit-learn for data preprocessing
+* Inspired by common emotion recognition models and datasets
