@@ -1,0 +1,8 @@
+0:Angry
+1:Disdainful
+2:Surprised
+3:Happy
+4:Natural
+5:Sad
+6:Scared
+7:Disgusted
