@@ -57,6 +57,8 @@ venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
+---
+
 ## Usage
 
 ### Training the Model
@@ -80,6 +82,8 @@ Once completed, it saves:
  * `emotion_recognition_model.h5` — the trained CNN model
  * `labels.txt` — mapping of label indices to emotion names
 
+---
+
 ## Running Real-Time Emotion Detection
 
 Run the detection script to start webcam emotion recognition:
@@ -88,6 +92,8 @@ python emotion_detection.py
 ```
 A window will open showing webcam video with detected faces and their predicted emotions.
 Press `q` to quit the program.
+
+---
 
 ## Project Structure
 
@@ -98,20 +104,28 @@ Press `q` to quit the program.
 * `labels.txt`: Label-to-index mapping saved after training
 * `emotion_recognition_model.h5`: Saved trained CNN model
 
+---
+
 ## Troubleshooting
 
 * Ensure your webcam is connected and accessible by OpenCV.
 * Verify that `emotion_recognition_model.h5` and `labels.txt` are in the same directory as `emotion_detection.py` or update paths accordingly.
 * If package installation fails, check your Python version and pip installation.
 
+---
+
 ## Contribution
 
 Contributions and improvements are welcome! Please fork the repository, create a feature branch, and submit a pull request.
 Maintain clear commit messages and update documentation as needed.
 
+---
+
 ## License
 
 This project is licensed under the MIT License.
+
+---
 
 ## Acknowledgements
 
