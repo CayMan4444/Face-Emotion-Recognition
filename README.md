@@ -34,4 +34,5 @@ The system captures live video from a webcam, detects faces using OpenCV's Haar 
 
 1. Clone this repository:
    
-```bash git clone https://github.com/CayMan4444/Face-Emotion-Recognition/
+```bash
+git clone https://github.com/CayMan4444/Face-Emotion-Recognition/
